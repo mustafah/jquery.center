@@ -1,4 +1,10 @@
 $.fn.center = function (options) {
+
+	if(options instanceof jQuery) {
+		inside_el = options;
+		options = null
+	}
+
 	options = options || {}
 	options.this = options.this || {}
 	options.inside = options.inside || {}
@@ -6,7 +12,7 @@ $.fn.center = function (options) {
 	if (options.this.h == null) options.this.h = 0.5
 	if (options.this.v == null) options.this.v = 0.5
 
-	options.inside.el = $(options.inside.el || this.parent())
+	options.inside.el = $(options.inside.el || inside_el || this.parent())
 	if (options.inside.h == null) options.inside.h = 0.5
 	if (options.inside.v == null) options.inside.v = 0.5
 
