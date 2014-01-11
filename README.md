@@ -9,6 +9,9 @@ A JQuery plugin help us to propotionally position a DOM element inside its paren
 
 
         $("#child").center()
+or if it is not its direct parent:
+        
+        $("#child").center($("#parent"))
 
 
 
