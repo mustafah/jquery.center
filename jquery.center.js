@@ -4,6 +4,7 @@ $.fn.center = function (options) {
 		inside_el = options;
 		options = null
 	}
+	else inside_el = null;
 
 	options = options || {}
 	options.this = options.this || {}
