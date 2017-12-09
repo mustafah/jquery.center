@@ -1,10 +1,9 @@
 $.fn.center = function (options) {
-
+	var inside_el = null;
 	if(options instanceof jQuery) {
 		inside_el = options;
 		options = null
 	}
-	else inside_el = null;
 
 	options = options || {}
 	options.this = options.this || {}
